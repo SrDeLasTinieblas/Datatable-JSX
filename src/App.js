@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <h1>Grilla Reutilizable</h1>
       <Grilla columns={columns} data={data} size='100%' mostrarEditar={true} mostrarEliminar={true} />
-
+      
     </div>
   );
 }

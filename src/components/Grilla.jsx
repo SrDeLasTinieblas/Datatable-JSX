@@ -1,20 +1,36 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import $ from "jquery";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
 import "datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css";
-
 import "datatables.net-buttons/js/buttons.html5.js";
 import "datatables.net-buttons/js/buttons.print.js";
 import "datatables.net-buttons/js/buttons.colVis.js";
-
 import "datatables.net";
 import "datatables.net-bs5";
 import "datatables.net-buttons-bs5";
+import Alert from './Alert';
 
 const Grilla = ({ columns, data, size, mostrarEditar, mostrarEliminar }) => {
   const tableRef = useRef(null);
   const dataTableRef = useRef(null);
+  const [showAlert, setShowAlert] = useState(false);
+
+  // Define handleDeleteAlert fuera de useEffect
+  const handleDeleteAlert = () => {
+    setShowAlert(!showAlert);
+  };
+
+  // const handleEdit = (e) => {
+  //   const id = $(e.target).data('id');
+  //   alert(id + " Modificar");
+  // };
+
+  // const handleDelete = (e) => {
+  //   const id = $(e.target).data('id');
+  //   //alert(id + " eliminar");
+  //   handleDeleteAlert(e);
+  // };
 
   useEffect(() => {
     if (!dataTableRef.current) {
@@ -30,6 +46,7 @@ const Grilla = ({ columns, data, size, mostrarEditar, mostrarEliminar }) => {
         });
       }
 
+
       if (mostrarEliminar) {
         columnsConfig.push({
           data: null,
@@ -39,6 +56,7 @@ const Grilla = ({ columns, data, size, mostrarEditar, mostrarEliminar }) => {
           className: 'no-export'
         });
       }
+
 
       if (tableRef.current) {
         const dataTable = $(tableRef.current).DataTable({
@@ -88,14 +106,16 @@ const Grilla = ({ columns, data, size, mostrarEditar, mostrarEliminar }) => {
   }, [columns, data, mostrarEditar, mostrarEliminar]);
 
   useEffect(() => {
-    const handleEdit = (e) => {
-      const id = $(e.target).data('id');
-      alert(id + " Modificar");
-    };
+
+  const handleEdit = (e) => {
+    const id = $(e.target).data('id');
+    alert(id + " Modificar");
+  };
 
     const handleDelete = (e) => {
       const id = $(e.target).data('id');
-      alert(id + " eliminar");
+      //alert(id + " eliminar");
+      handleDeleteAlert(e);
     };
 
     $('.edit-button').on('click', handleEdit);
@@ -105,10 +125,12 @@ const Grilla = ({ columns, data, size, mostrarEditar, mostrarEliminar }) => {
       $('.edit-button').off('click', handleEdit);
       $('.delete-button').off('click', handleDelete);
     };
-  }, []);
+
+  }, [showAlert]); // Agrega showAlert como dependencia
 
   return (
     <div className="w-full" style={{ width: size }}>
+      {showAlert && <Alert title = 'hola' message = 'desde borrar?' />} {/* Aquí renderizamos el Alert si showAlert es true */}
       <table ref={tableRef} className="table table-striped">
         <thead>
           <tr>
