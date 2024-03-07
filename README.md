@@ -27,45 +27,64 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Nombre de tu Proyecto
 
-### `npm run eject`
+Descripción corta de tu proyecto.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instalación
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Asegúrate de tener [npm](https://www.npmjs.com/) instalado. Luego, ejecuta los siguientes comandos para instalar las dependencias necesarias:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install jquery
+npm install bootstrap
+npm install datatables.net
+npm install datatables.net-buttons
+npm install datatables.net jquery bootstrap
+npm install datatables.net-buttons
+npm install jquery bootstrap@5 datatables.net-bs5 datatables.net-buttons-bs5
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<!-- Enlace al CDN de Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/buttons/3.0.0/css/buttons.bootstrap5.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap5.css" rel="stylesheet" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-### Code Splitting
+<!-- DataTables -->
+<script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- DataTables Buttons -->
+<script src="https://cdn.datatables.net/buttons/3.0.0/js/dataTables.buttons.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.bootstrap5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.colVis.min.js"></script>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contribuciones
 
-### Making a Progressive Web App
+Si quieres contribuir a este proyecto, por favor sigue los siguientes pasos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Haz un fork del proyecto.
+2. Crea tu rama de características (`git checkout -b feature/NombreCaracteristica`).
+3. Commitea tus cambios (`git commit -am 'Añade alguna característica'`).
+4. Empuja a la rama (`git push origin feature/NombreCaracteristica`).
+5. Abre un Pull Request.
 
-### Advanced Configuration
+## Licencia
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Este proyecto está bajo la Licencia XYZ - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Datatable-JSX
