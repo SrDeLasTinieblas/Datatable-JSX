@@ -83,7 +83,7 @@ Si quieres contribuir a este proyecto, por favor sigue los siguientes pasos:
 
 ## Licencia
 
-Este proyecto está bajo la Licencia XYZ - ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia Tinieblas - ver el archivo [LICENSE](LICENSE) para más detalles.
 
 
 
